@@ -8,10 +8,10 @@ ENV NODE_ENV production
 WORKDIR /usr/src/app
 
 # Copying all the files in our project
-COPY package*.json ./
+COPY package.json ./
 
 # Installing dependencies
-RUN npm install
+RUN npm install husky -g && npm install
 
 # Bundle app source
 COPY . .

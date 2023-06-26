@@ -4,3 +4,11 @@ build
 .git
 *.md
 .gitignore
+.dockerignore
+.gitattributes
+.github
+.husky
+.prettierignore
+.prettierrc.json
+.vercelignore
+.vscode

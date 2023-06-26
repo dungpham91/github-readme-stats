@@ -49,7 +49,8 @@ jobs:
           REGISTRY: dungpham91
           REPOSITORY: github-readme-stats
         run: |
-          TAG_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g')
+          TAG_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | sed "s/ //g")
+          echo ${TAG_VERSION}
 
           docker build \
             -t $REGISTRY/$REPOSITORY:${TAG_VERSION} \
